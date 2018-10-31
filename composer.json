@@ -1,5 +1,5 @@
 {
-    "name": "AtServer/YafController",
+    "name": "at_server/yafcontroller",
     "description": "YafController",
     "license": "MIT",
     "type": "library",
