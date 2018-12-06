@@ -26,6 +26,12 @@ class YafController extends \Yaf\Controller_Abstract
 		$this->result = \AtServer\Result::Instance();
 	}
 
+	protected function init()
+	{
+		if(isAjaxRequest()){
+		    $this->result();
+		}
+	}
 
 	/**
 	 * 301重定向 url跳转
