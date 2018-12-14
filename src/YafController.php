@@ -20,8 +20,10 @@ class YafController extends \Yaf\Controller_Abstract
 	 * @var \AtServer\Result
 	 */
 	protected $result;
+	
+	protected $sign = false;
 
-	protected function result()
+	private function result()
 	{
 		$this->result = \AtServer\Result::Instance();
 	}
@@ -30,6 +32,9 @@ class YafController extends \Yaf\Controller_Abstract
 	{
 		if(isAjaxRequest()){
 		    $this->result();
+		}
+		if($this->sign){
+		    Sign::Sign();
 		}
 	}
 
